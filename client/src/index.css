@@ -6,19 +6,23 @@
 
 body {
   font-family: "roboto", sans-serif;
+  background-color: black !important;
+  color: rgb(140, 212, 30) !important;
 }
 
 a {
-  color: #60bf70 !important;
+  color: rgb(140, 212, 30) !important;
   text-decoration: none;
   padding: 20px;
   margin-top: 20px;
 }
-
+box{
+  background-color: black !important;
+}
 a:hover {
-  color: black !important;
+  color: red !important;
 }
 
 a.active {
-  color: #57d96d !important;
+  color:  greenyellow !important;
 }

@@ -1,11 +1,16 @@
 import React from "react";
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme, createTheme } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 const Navbar = () => {
-  const theme = useTheme();
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
+  // const theme = useTheme();
   const navigate = useNavigate();
   const loggedIn = JSON.parse(localStorage.getItem("authToken"));
 
@@ -23,13 +28,13 @@ const Navbar = () => {
   return (
     <Box
       width={"100%"}
-      backgroundColor={theme.palette.background.alt}
+      backgroundColor={darkTheme.palette.background.alt}
       p="1rem 6%"
       textAlign={"center"}
       sx={{ boxShadow: 3, mb: 2 }}
     >
       <Typography variant="h1" color="primary" fontWeight="medium">
-        <Link to={'/'} >My GPT3 Clone</Link>
+        <Link to={'/'} >ChatGPT web app - FutureFinders</Link>
       </Typography>
       {loggedIn ? (
         <>
